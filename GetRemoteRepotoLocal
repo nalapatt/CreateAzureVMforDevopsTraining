@@ -1,3 +1,25 @@
 #Here you will learn how to clone a remote repo from Github 
 Method -
-Git clone "your Github repo url" ( Cut and paste your url from your remote repo, go 
+mkdir gittraining ( create a directory to work on all your git files)
+cd gittraining (change into the directory)
+git init
+Git clone "your Github repo url" ( Cut and paste your url from your remote repo, go to Code press the down arrow under Clone https the url will be displayed)
+If Success it should show Done
+dir ( it should show the name of the repo that you cloned from the remote repo)
+cd Directoryname (change into the directory that was created )
+dir (this should show the files if any that were downloaded from the remote repo)
+vi filename (this will open the file in a vi editor mode)
+i (inside the editor press i to insert changes)
+add the changes
+esc button
+:wq! (to save and quit the editor)
+cat filename (should show the new changes made to the file)
+you can now make changes in all the files if desired
+git status (will show all the files changed)
+git add .(space . will add all the files changed to the staging area)
+git commit -m "your message here"( this will save your file)
+git status (will show all the commited files waiting to be pushed into the remote repo)
+git push ( this will prompt you to enter your github username and password (i hope you noted down what that is)
+if succesful it will show where the push was made
+Now go into your remote repo in Github, refresh your page and it show the recent changes made in the local repo
+Hurray you have changed and commited and pushed files from local to remote repo
