@@ -1,0 +1,59 @@
+#Create an account in Microsoft Azure, opt for the free one, they give you $200 in free credit and this credit should be enough to cover the amount
+#you will use as a student
+
+Method - Create a new free account in Microsoft azure , memorize or write down your username and password
+Sign in to the the account 
+
+#Create a new resource group which will contain your new VM
+Method - 
+Go to the home directory 
+Click the + button to Create a resource
+This will take you into the Azure Marketplace which lists the popular choices
+Select Ubuntu Server 18.04 LTS
+It will take you into the create virtual machine page
+Subscription - Choose the one available or the default one
+Resource Group - Select Create New - Give any new resource group name, I generally name it what_ever_the_name_grp(use names which are self explanatory) 
+Virtual Machine Name - Give any new virtual machine name, I generally name it whateverthename
+vm (use names which are self explanatory 
+and try to use a name that relates to the group, because remember your virtual machine will be under the resource group)
+Region - Choose your region ( your location in the world)
+Availablity options - No infrastructure redunancy required
+Image - Ubuntu Server 18.04
+Azure Spot Instance - No
+Size - Select Default that was chosen
+Authentication Type - Choose password
+UserName - Create your username ( try to memorize it)
+Password - Create a password ( try to memorize it)
+Confirm Password
+Public inbound ports - Allow selected ports
+Select inbound ports - SSH(22)
+Click Next until you come to the Management Tab
+Select the Enable Shutdown to On and Notification before shutdown to your choice (I choose off, I do not want unnecessary email )
+Click Next until you come to the review and create - This will show you the amount you will be charged by hour (but remember you have credits so dont worry)
+Press the Create button
+it will go into the Deployment in progress - this will take some time
+Then when Deployment is complete, you will see two buttons
+Choose Go to Resource
+It will go into your new virtual machine window
+Voila - your new vm is ready for use
+
+#Connect to your New VM - Now since your new virtual machine is created what do you do with it
+Method -
+On the top of the screen you will see a Connect choice
+Press the connect - 3 choices will pop up , choose the SSH 
+it will go into the connect ssh window - here you will see your public IP address and the command that you have to use to connect to your VM
+On the top of the screen you will see a terminal button
+Press that and you will go into the bash terminal
+Here you will see if the cloud shell succeeded in connecting to the terminal
+if it succeeds you will see a succeeded message and then the bash terminal will change to your username@azure
+now you cut and paste the command line which is shown in the azure terminal 
+then trim it down to ssh username@IP_address
+press enter
+when using for the first time it will ask you "are you sure you want to continue connection yes/no"
+press Yes
+Then it will ask for the password that you created for this VM - enter that here
+Press enter
+If successful the prompt will change to username@Vmname
+Ha Ha you have reached so far now your VM is ready for use 
+
+
