@@ -4,7 +4,9 @@ Configure Port 8080 for Jenkins
 Install Jenkins 
 #Download Maven
 in a new tab open https://maven.apache.org/download.cgi
-Download apache-maven-3.6.3-bin.zip
+Download apache-maven-3.6.3-bin.zip ( if this downloads on your local machine instead of in the VM either download filezilla to transfer the files into the VM
+or use SCP or FTP to copy the files from your local to the azure VM)
+check is the zip file is dowloaded in the terminal
 unzip apache-maven-3.6.3-bin.zip in the terminal
 In Jenkins go to Manage Jenkins
 Go to Global Tool Configuration
