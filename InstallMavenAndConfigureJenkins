@@ -1,0 +1,25 @@
+#Here you will learn how to download Maven and configure Maven,Git and JDK in Jenkins to build Maven jobs in Jenkins
+Create an Azure VM
+Configure Port 8080 for Jenkins
+Install Jenkins 
+#Download Maven
+in a new tab open https://maven.apache.org/download.cgi
+Download apache-maven-3.6.3-bin.zip
+unzip apache-maven-3.6.3-bin.zip in the terminal
+In Jenkins go to Manage Jenkins
+Go to Global Tool Configuration
+Press Maven installations
+Give a Maven name (any name you want)
+Give the path ( in my case it is /home/username/apache-maven-3.6.3/ to check what the path is type pwd)
+untick install automatically
+Press JDk installations
+Give a JDK name ( any name)
+Give the path ( in my case it is usr/lib/jvm/java-8-openjdk-amd64 )(to find path type update-alternatives --list java the path is the ones before the jdk file)
+untick install automatically
+Press Git installations
+Give a Git name (I gave git)
+Give the path ( in my case it is /usr/bin/git to check what the path is type which git)
+untick install automatically
+Save
+Hooray now your Maven,JDK and Git is configured in Jenkins
+(if JDK and Git is not installed in your VM go to the relevant documents which will guide you that is InstallGitInAzureVM and InstallJenkinsInAzureVM)
