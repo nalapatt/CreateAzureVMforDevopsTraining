@@ -1,3 +1,47 @@
 #here you will learn how to install jenkins and use it from your local VM
 Method -
-Go to Create a new resource and a new VM
+Go back to file studentazurevm to learn how to create a new resource and VM
+after creating the new VM go to resource
+when VM window opens go to Networking
+In that window press the "add the inbound port rule" button
+destination port ranges - 8080
+Name - Port_8080
+Description - you can add a description if you want
+Press Add this will create a new port 8080 port
+Now go to Connect
+Connect to the VM
+Open up the terminal
+It should go to the prompt yourusername@azure
+Type in ssh username@IP_address (which is shown in the command line)
+fingerprint for the first time it will ask you Yes/No 
+Press Yes
+now the prompt should change to username@VMname
+Now you can start installing jenkins
+pwd ( this will show the path) 
+java -version (to confirm if java is installed)
+if no version,then it is not installed, but it will give you the commands to use to install it
+sudo apt-get update
+sudo apt install openjdk-8-jre-headless
+java -version (if successful you will see the version here)
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - (this will start the jenkins download)
+sudo vi /etc/apt/sources.list
+press i (to enter insert mode)
+at the end of the file paste this line (deb https://pkg.jenkins.io/debian-stable binary/)
+press esc and :wq! to save and quit editor
+sudo apt-get update
+sudo apt-get install jenkins (press Y to continue)
+sudo systemctl status jenkins ( this will check the status of jenkins it is already running ? good)
+now open a new tab on your browser
+IPAddress:8080 ( this IP address is the one that is shown as your VM's public IP address)
+This will take you to the Unlock Jenkins page
+Copy the path and go back to your terminal
+sudo cat pathname (that you copied from the unlock jenkins page)
+this will display a long password
+copy that and go back to the unlock jenkins page and paste it in the password (make sure it is copied correctly without any extra spaces)
+if correct it should go into the customize jenkins page
+click on install suggested plugins
+create a new admin user - you can enter your details here 
+start using jenkins
+Hurray you are in Jenkins
+
+
