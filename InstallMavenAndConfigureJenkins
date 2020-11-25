@@ -19,10 +19,19 @@ Give a JDK name ( any name)
 Give the path ( in my case it is usr/lib/jvm/java-8-openjdk-amd64 )(to find path type this, update-alternatives --list java 
 (the path is the ones before the jdk file)
 untick install automatically
+if there is an error saying this is not a jdk diretory, check the path , if correct,
+maybe only the jre is installed and not the jdk. so then type this command line sudo apt install default-jdk and then try again
 Press Git installations
 Give a Git name (I gave git)
 Give the path ( in my case it is /usr/bin/git to check what the path is type which git)
 untick install automatically
 Save
+Go to Manage Jenkins
+Manage Plugins
+Maven Intergration PlugIn in the available column
+Click Install without Restart
+Now you will be able to see the Maven Build in the Create Job section of Jenkins
+Git Plugin in the manage plugins section
+Click Install without Restart
 Hooray now your Maven,JDK and Git is configured in Jenkins
 (if JDK and Git is not installed in your VM go to the relevant documents which will guide you that is InstallGitInAzureVM and InstallJenkinsInAzureVM)
