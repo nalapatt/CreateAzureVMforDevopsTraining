@@ -8,10 +8,12 @@ first step would be to create a VM in Azure which is described in CreateVMinAzur
 #GIT
 
 second step would be to install git on the Azure VM which is described in InstallGitInAzureVM
+
 third step would be to clone a remote git to the local git on the Azure VM which is described in CloneRemoteGitRepoToLocalGit
 
 #JENKINS
 
 fourth step would be to install and launch jenkins in Azure VM which is described in InstallJenkinsInAzureVM
+
 fifth step would be to configure Maven in Jenkins which is described in InstallMavenAndConfigureJenkins
 
