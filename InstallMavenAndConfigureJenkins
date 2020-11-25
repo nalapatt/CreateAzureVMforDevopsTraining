@@ -16,7 +16,8 @@ Give the path ( in my case it is /home/username/apache-maven-3.6.3/ to check wha
 untick install automatically
 Press JDk installations
 Give a JDK name ( any name)
-Give the path ( in my case it is usr/lib/jvm/java-8-openjdk-amd64 )(to find path type update-alternatives --list java the path is the ones before the jdk file)
+Give the path ( in my case it is usr/lib/jvm/java-8-openjdk-amd64 )(to find path type this, update-alternatives --list java 
+(the path is the ones before the jdk file)
 untick install automatically
 Press Git installations
 Give a Git name (I gave git)
