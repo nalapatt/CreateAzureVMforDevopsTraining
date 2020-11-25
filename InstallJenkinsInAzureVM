@@ -30,7 +30,8 @@ at the end of the file paste this line (deb https://pkg.jenkins.io/debian-stable
 press esc and :wq! to save and quit editor
 sudo apt-get update
 sudo apt-get install jenkins (press Y to continue)
-sudo systemctl status jenkins ( this will check the status of jenkins it is already running ? good)
+sudo systemctl status jenkins ( this will check the status of jenkins it is already running ? if inactive go to next step else skip next step)
+sudo systemctl enable jenkins 
 now open a new tab on your browser
 IPAddress:8080 ( this IP address is the one that is shown as your VM's public IP address)
 This will take you to the Unlock Jenkins page
