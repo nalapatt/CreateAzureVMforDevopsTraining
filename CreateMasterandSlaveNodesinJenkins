@@ -48,6 +48,8 @@ Add Credentials
 Domain	:Global credentials (unrestricted)
 Kind	:ssh username with private key
 Scope	:Global (Jenkins, nodes, items, all child items, etc)
+ID:jenkins-slave1
+Description:Jenkins-slave1
 Username:ubuntu	
 Private Key :Enter directly
 Add : Copy and Paste key from terminal 
