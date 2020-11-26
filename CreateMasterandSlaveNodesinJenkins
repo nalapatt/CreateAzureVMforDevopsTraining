@@ -1,0 +1,84 @@
+Go to Jenkins Master Slave Configuration | Demo | On AWS EC2
+By Let's Go Tech In a Cloudy Way
+for a great youtube video
+
+First create 2 instances in AWS as Jenkins master and Jenkins Slave
+Download your ssh key and store it in a safe place
+
+Connect to Jenkins master on your terminal
+cd Downloads
+chmod 400 yourkey.pem
+ssh -i "yourkey.pem" ubuntu@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com
+Install Java and Maven
+Install jenkins
+Connect to the Jenkins UI
+All this is elaborated in the document InstallJenkinsInAzureVM and InstallMavenAndConfigureJenkins
+
+next Connect to the slave node on your terminal 
+cd Downloads
+ssh -i "yourkey.pem" ubuntu@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com
+sudo su
+pwd
+mkdir jenkins
+pwd ( this is the path you are going to use in configuring the node as your remote directory)
+ls -lrt ( this will show your new directory jenkins
+Install Java and Maven
+ 
+next Go to Jenkins UI
+go to Manage Jenkins
+Manage Nodes
+Now you see Master already configured
+Create a New Node 
+Name it Jenkins-slave1
+select Permanent Agent
+Configure the agent
+Name : Jenkins-slave-1
+Description	:This is the slave1 where code is compiled
+# of executors	:1
+Remote root directory	:/home/ubuntu/jenkins (this is the path that we noted when we connected to the terminal and created 
+Labels:	Jenkins-compile-slave (keep a note of this it will be used later when building a job)
+Usage	:Use this node as much as possible
+Launch method	:Launch agents via SSH
+Host	: xxx.xx.xx.xxx (the public Ip address of the AWS EC2 slave instance , this is found in the instance details/info)
+Credentials	:Add Drop down window choose jenkins
+this takes you to another window
+fill in the details in that window
+
+Add Credentials
+Domain	:Global credentials (unrestricted)
+Kind	:ssh username with private key
+Scope	:Global (Jenkins, nodes, items, all child items, etc)
+Username:ubuntu	
+Private Key :Enter directly
+Add : Copy and Paste key from terminal 
+( Go back to the terminal , cd Downloads , cat yournamekey.pem , copy the entire key from startof private key to end of private key)
+Press Add
+it goes back to the Node Window 
+Continue with 
+ID	:JenkinsSlave
+Description	:JenkinsSlave
+
+Credentials	:ubuntu (jenkins-slave1)
+Host Key Verification Strategy	:Manually trusted key Verification Strategy
+Availability	:Keep this agent online as much as possible
+
+Save This 
+
+You will now see the Slave Node Configured 
+Click on it and launch it , go to the Log , if it says agent successfully connected Hooray
+
+Now if you go to create a new item
+and in General select: Restrict where this project can be run
+Label Expression	: Jenkins-compile-slave ( this is the label you used when configuring the slave node, hope you memorized it 
+otherwise go to the node and get the label name from the node configuration)
+Execute shell echo "hello from slave"
+Build
+
+Yeah you have run the first build job which runs it in the slave
+
+
+
+
+ 
+
+
