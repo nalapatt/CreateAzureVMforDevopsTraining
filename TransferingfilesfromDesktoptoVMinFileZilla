@@ -10,6 +10,16 @@ If you want to use FileZila to upload to or download data from a normal FTP serv
 
 just put the information in the “Host”, “Username”, “Password” box and connect. 
 
+site manager 
+use FTP protocol
+hostname - public IP address of azure VM
+username of VM
+password of VM
+port 22
+connect
+and quickconnect
+
+
 However for Amazon instance, we use key-pair to log in instead of password for better safety. So it is a little bit more complicated to configure.
 
 Open “Settings” and click “SFTP”
